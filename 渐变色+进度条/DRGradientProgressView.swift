@@ -10,6 +10,7 @@ import UIKit
 
 class DRGradientProgressView: UIView {
 
+  // 进度
   var progress:CGFloat
   
   var proglayer: CAGradientLayer
@@ -27,7 +28,7 @@ class DRGradientProgressView: UIView {
   }
   
   func shadowAsInverse() -> CAGradientLayer {
-    let newShadowFrame = CGRectMake(0, 0, 0, 2)
+    let newShadowFrame = CGRectMake(0, 0, 0, self.bounds.height)
     proglayer.frame = newShadowFrame
     // 渐变的方向
     proglayer.startPoint = CGPointMake(0.0, 0.5)
@@ -67,7 +68,7 @@ class DRGradientProgressView: UIView {
 extension DRGradientProgressView {
   
   override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-    let newShadowFrame = CGRectMake(0, 0, self.bounds.width, 2)
+    let newShadowFrame = CGRectMake(0, 0, self.bounds.width, self.bounds.height)
     proglayer.frame = newShadowFrame
     
     let colorArray = NSMutableArray(array: proglayer.colors!)
@@ -86,7 +87,7 @@ extension DRGradientProgressView {
     
     // 增加 进度模式
     let maskLayer = CALayer()
-    maskLayer.frame = CGRectMake(0.0, 0.0, 0.0, 2.0)
+    maskLayer.frame = CGRectMake(0.0, 0.0, 0.0, self.bounds.height)
     maskLayer.backgroundColor = UIColor.blackColor().CGColor
     proglayer.mask = maskLayer
     

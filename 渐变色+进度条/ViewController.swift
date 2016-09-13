@@ -39,7 +39,6 @@ class ViewController: UIViewController {
   
   func move() {
     progView.progress = i
-    print("\(i)")
     i = i + CGFloat(0.01)
   }
   

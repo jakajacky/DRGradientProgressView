@@ -12,6 +12,7 @@
 		F28A77591D86A93000C2D974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28A77571D86A93000C2D974 /* Main.storyboard */; };
 		F28A775B1D86A93000C2D974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28A775A1D86A93000C2D974 /* Assets.xcassets */; };
 		F28A775E1D86A93000C2D974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28A775C1D86A93000C2D974 /* LaunchScreen.storyboard */; };
+		F28A77661D86AC9B00C2D974 /* DRGradientProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28A77651D86AC9B00C2D974 /* DRGradientProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F28A775A1D86A93000C2D974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F28A775D1D86A93000C2D974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F28A775F1D86A93000C2D974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F28A77651D86AC9B00C2D974 /* DRGradientProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRGradientProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				F28A77531D86A93000C2D974 /* AppDelegate.swift */,
 				F28A77551D86A93000C2D974 /* ViewController.swift */,
+				F28A77651D86AC9B00C2D974 /* DRGradientProgressView.swift */,
 				F28A77571D86A93000C2D974 /* Main.storyboard */,
 				F28A775A1D86A93000C2D974 /* Assets.xcassets */,
 				F28A775C1D86A93000C2D974 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				F28A77561D86A93000C2D974 /* ViewController.swift in Sources */,
 				F28A77541D86A93000C2D974 /* AppDelegate.swift in Sources */,
+				F28A77661D86AC9B00C2D974 /* DRGradientProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

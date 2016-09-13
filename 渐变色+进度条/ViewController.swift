@@ -10,16 +10,38 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  var progView:DRGradientProgressView!
+  var i:CGFloat!
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // 创建光谱 进度条
+    progView = DRGradientProgressView(frame: CGRect(x: 0, y: 64, width: self.view.bounds.width, height: 2))
+    progView.progress = 0.0
+    self.view.addSubview(progView)
+    
+    
+    // 模拟进度
+    i = 0.0
+    let timer = NSTimer(timeInterval: 0.1, target: self, selector: #selector(move), userInfo: nil, repeats: true)
+    let runloop = NSRunLoop.mainRunLoop()
+    runloop.addTimer(timer, forMode: "NSDefaultRunLoopMode")
+    
+    timer.fire()
   }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
-
+  
+  func move() {
+    progView.progress = i
+    print("\(i)")
+    i = i + CGFloat(0.01)
+  }
+  
 }
 

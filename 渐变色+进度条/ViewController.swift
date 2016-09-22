@@ -25,9 +25,9 @@ class ViewController: UIViewController {
     
     // 模拟进度
     i = 0.0
-    let timer = NSTimer(timeInterval: 0.1, target: self, selector: #selector(move), userInfo: nil, repeats: true)
-    let runloop = NSRunLoop.mainRunLoop()
-    runloop.addTimer(timer, forMode: "NSDefaultRunLoopMode")
+    let timer = Timer(timeInterval: 0.1, target: self, selector: #selector(move), userInfo: nil, repeats: true)
+    let runloop = RunLoop.main
+    runloop.add(timer, forMode: RunLoopMode(rawValue: "NSDefaultRunLoopMode"))
     
     timer.fire()
   }
